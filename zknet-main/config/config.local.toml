@@ -1,0 +1,41 @@
+[Log]
+Level = "debug"
+Outputs = ["stdout"]
+
+[Database]
+Database = "postgres"
+User = "test_user"
+Password = "test_password"
+Name = "test_db"
+Host = "zkevm-bridge-db"
+Port = "5435"
+MaxConns = 20
+
+[Etherman]
+L1URL = "https://bsc-rpc.alishdahal.com.np/"
+L2URLs = ["http://zkevm-json-rpc:8123"]
+
+[Synchronizer]
+SyncInterval = "2s"
+SyncChunkSize = 100
+GrpcURL = "zkevm-broadcast:61090"
+
+[BridgeController]
+Store = "postgres"
+Height = 32
+
+[BridgeServer]
+GRPCPort = "9090"
+HTTPPort = "8080"
+
+[NetworkConfig]
+GenBlockNumber = 31684795
+PolygonZkEVMAddress = "0x8C815892da4e8b7f460BaE669Dfa641603CEa287"
+PolygonBridgeAddress = "0x04101acde7459aaD49ab111cB70Bf827A4227915"
+PolygonZkEVMGlobalExitRootAddress = "0x1871e0b27cCd9DE2143C0695fBEb48aFc36f8f0a"
+MaticTokenAddress = "0x85aB5F30b00D40072acE85e6f516AAF9bF5F7484"
+L2PolygonBridgeAddresses = ["0x04101acde7459aaD49ab111cB70Bf827A4227915"]
+L1ChainID = 97
+
+[ClaimTxManager]
+Enabled = true
